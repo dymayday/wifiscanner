@@ -34,7 +34,9 @@ extern crate wifiscanner;
 
 ```rust
 use wifiscanner;
-println!("{:?}", wifiscanner::scan());
+// This is the my wireless interface's name on my machine
+let iface: &str = "wlp2s0"
+println!("{:?}", wifiscanner::scan(iface));
 ```
 
 Alternatively if you've cloned the the Git repo, you can run the above example
