@@ -30,7 +30,7 @@
 //!
 //! ```
 //! use wifiscanner;
-//! println!("{:?}", wifiscanner::scan());
+//! println!("{:?}", wifiscanner::scan("wlp2s0"));
 //! ```
 //!
 //! Alternatively if you've cloned the the Git repo, you can run the above example
@@ -66,7 +66,7 @@ pub struct Wifi {
 
 /// Returns a list of WiFi hotspots in your area - (OSX/MacOS) uses `airport`
 #[cfg(target_os="macos")]
-pub fn scan() -> Result<Vec<Wifi>, Error> {
+pub fn scan(iface: &str) -> Result<Vec<Wifi>, Error> {
     use std::process::Command;
     let output = try!(Command::new("/System/Library/PrivateFrameworks/Apple80211.\
     framework/Versions/Current/Resources/airport")
@@ -81,7 +81,7 @@ pub fn scan() -> Result<Vec<Wifi>, Error> {
 
 /// Returns a list of WiFi hotspots in your area - (Linux) uses `iwlist`
 #[cfg(target_os="linux")]
-pub fn scan() -> Result<Vec<Wifi>, Error> {
+pub fn scan(iface: &str) -> Result<Vec<Wifi>, Error> {
     use std::env;
     use std::process::Command;
 
@@ -93,6 +93,7 @@ pub fn scan() -> Result<Vec<Wifi>, Error> {
 
     let output = try!(Command::new("iwlist")
                           .env(PATH_ENV, path)
+                          .arg(iface)
                           .arg("scan")
                           .output()
                           .map_err(|_| Error::CommandNotFound));
