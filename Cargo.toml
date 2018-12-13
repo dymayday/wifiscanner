@@ -1,10 +1,9 @@
 [package]
 name = "wifiscanner"
-version = "0.3.6"
-authors = ["Mark Sta Ana <booyaabooyaabooyaa@gmail.com>"]
+version = "0.4.0"
+authors = ["Meidhy forked from Mark Sta Ana <booyaabooyaabooyaa@gmail.com>"]
 description = "List WiFi hotspots in your area"
-repository = "https://github.com/booyaa/wifiscanner"
-documentation = "https://docs.rs/wifiscanner"
+repository = "From the original idea of https://github.com/booyaa/wifiscanner"
 readme = "README.md"
 keywords = ["wifi","hotspots","network"]
 license = "Apache-2.0"
