@@ -1,9 +1,6 @@
 # wifiscanner
 
-[![Build Status](https://travis-ci.org/booyaa/wifiscanner.svg?branch=master)](https://travis-ci.org/booyaa/wifiscanner)
-[![Crates](https://img.shields.io/crates/v/wifiscanner.svg)](https://crates.io/crates/wifiscanner)
-[![docs.rs](https://docs.rs/wifiscanner/badge.svg)](https://docs.rs/wifiscanner)
-
+This is my fork from [on crates.io](https://crates.io/crates/wifiscanner) to add use an interface name as argument to the *scanner*.
 A crate to list WiFi hotspots in your area.
 
 As of v0.3.x now supports OSX and Linux. Windows to
