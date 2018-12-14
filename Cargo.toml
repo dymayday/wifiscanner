@@ -1,6 +1,6 @@
 [package]
 name = "wifiscanner"
-version = "0.4.0"
+version = "0.4.1"
 authors = ["Meidhy forked from Mark Sta Ana <booyaabooyaabooyaa@gmail.com>"]
 description = "List WiFi hotspots in your area"
 repository = "From the original idea of https://github.com/booyaa/wifiscanner"
