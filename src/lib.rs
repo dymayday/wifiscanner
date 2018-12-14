@@ -30,7 +30,8 @@
 //!
 //! ```
 //! use wifiscanner;
-//! println!("{:?}", wifiscanner::scan("wlp2s0"));
+//! // The 'lo' interface usually refers to the 'localhost' on linux system
+//! println!("{:?}", wifiscanner::scan("lo"));
 //! ```
 //!
 //! Alternatively if you've cloned the the Git repo, you can run the above example
