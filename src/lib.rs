@@ -40,7 +40,9 @@
 extern crate regex;
 #[doc(no_inline)]
 use regex::Regex;
-
+#[macro_use]
+extern crate serde_derive;
+extern crate serde;
 
 #[allow(missing_docs)]
 #[derive(Debug,PartialEq,Eq)]
@@ -53,7 +55,7 @@ pub enum Error {
 }
 
 /// Wifi struct used to return information about wifi hotspots
-#[derive(Clone,Debug,PartialEq,Eq)]
+#[derive(Clone,Debug,PartialEq,Eq,Serialize,Deserialize)]
 pub struct Wifi {
     /// mac address
     pub mac: String,

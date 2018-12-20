@@ -1,6 +1,6 @@
 [package]
 name = "wifiscanner"
-version = "0.4.1"
+version = "0.4.2"
 authors = ["Meidhy forked from Mark Sta Ana <booyaabooyaabooyaa@gmail.com>"]
 description = "List WiFi hotspots in your area"
 repository = "From the original idea of https://github.com/booyaa/wifiscanner"
@@ -10,3 +10,5 @@ license = "Apache-2.0"
 
 [dependencies]
 regex = "0.1"
+serde = "1.0.82"
+serde_derive = "1.0.82"
