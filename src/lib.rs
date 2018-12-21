@@ -94,8 +94,9 @@ pub fn scan(iface: &str) -> Result<Vec<Wifi>, Error> {
         format!("{}:{}", v.to_string_lossy().into_owned(), path_system)
     });
 
-    let output = try!(Command::new("iwlist")
+    let output = try!(Command::new("sudo")
                           .env(PATH_ENV, path)
+                          .arg("iwlist")
                           .arg(iface)
                           .arg("scan")
                           .output()
